@@ -3,18 +3,510 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Reggie Navato | IT Solutions Architect</title>
+
+    <meta name="description"
+        content="Professional portfolio of Reggie Navato, an IT Solutions Architect specializing in Cloud, Infrastructure, ERP, Enterprise Solutions, and Technical Pre-Sales.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0f172a;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 90vh;
+            max-width: 1100px;
+            margin: auto;
+            padding: 100px 25px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #38bdf8;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            font-size: 18px;
+            color: #94a3b8;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            margin-right: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .btn-secondary {
+            border: 1px solid #475569;
+            color: #e2e8f0;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+        .about-text {
+            max-width: 850px;
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+
+        .skill-card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .experience-item {
+            border-left: 3px solid #38bdf8;
+            padding-left: 25px;
+            margin-bottom: 35px;
+        }
+
+        .experience-item h3 {
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .date {
+            color: #38bdf8;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
+            color: #94a3b8;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+
+        .project-card h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding-top: 70px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <h1>Reggie Navato</h1>
+    <nav>
 
-    <h2>IT Solutions Architect | Cloud & Infrastructure | ERP | Technical Pre-Sales</h2>
+        <div class="nav-container">
 
-    <p>
-        Welcome to my personal professional portfolio.
-    </p>
+            <div class="logo">
+                RN
+            </div>
+
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <header class="hero">
+
+        <h1>Reggie Navato</h1>
+
+        <h2>
+            IT Solutions Architect | Cloud & Infrastructure | ERP | Technical Pre-Sales
+        </h2>
+
+        <p>
+            Technology professional with extensive experience across
+            infrastructure, cloud computing, enterprise systems, ERP,
+            solution architecture, and technical pre-sales.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#about" class="btn btn-primary">
+                Explore My Profile
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+                Contact Me
+            </a>
+
+        </div>
+
+    </header>
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <p class="about-text">
+
+            I am an IT professional with extensive experience in technology,
+            infrastructure, cloud services, enterprise systems, ERP,
+            solution architecture, and technical pre-sales.
+
+            My background spans from traditional IT infrastructure to modern
+            cloud and enterprise technology solutions, with a strong focus on
+            understanding business requirements and translating them into
+            practical technology solutions.
+
+        </p>
+
+    </section>
+
+    <section id="expertise">
+
+        <h2 class="section-title">
+            Core <span>Expertise</span>
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill-card">
+                <h3>Cloud Computing</h3>
+                <p>
+                    Cloud services, cloud architecture, migration concepts,
+                    infrastructure services, and cloud-based solutions.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Infrastructure</h3>
+                <p>
+                    IT infrastructure, servers, networking, virtualization,
+                    storage, systems administration, and enterprise environments.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>ERP & Enterprise Systems</h3>
+                <p>
+                    Enterprise resource planning, business applications,
+                    systems integration, and enterprise technology solutions.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Solution Architecture</h3>
+                <p>
+                    Requirements analysis, solution design, architecture,
+                    technology evaluation, and technical documentation.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Technical Pre-Sales</h3>
+                <p>
+                    Solution presentation, technical discovery, proposals,
+                    demonstrations, sizing, estimation, and client engagement.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>IT Operations</h3>
+                <p>
+                    IT service management, application support, monitoring,
+                    troubleshooting, and operational processes.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="experience">
+
+        <h2 class="section-title">
+            Professional <span>Experience</span>
+        </h2>
+
+        <div class="experience-item">
+
+            <h3>Solutions Architecture & Technical Pre-Sales</h3>
+
+            <div class="date">
+                Professional Experience
+            </div>
+
+            <p>
+                Working with organizations to understand business and
+                technical requirements, design appropriate solutions,
+                support technical presentations, and develop solution
+                proposals for enterprise technology initiatives.
+            </p>
+
+        </div>
+
+        <div class="experience-item">
+
+            <h3>Cloud & Infrastructure Engineering</h3>
+
+            <div class="date">
+                Professional Experience
+            </div>
+
+            <p>
+                Experience across infrastructure technologies, cloud services,
+                systems, enterprise environments, and technical operations.
+            </p>
+
+        </div>
+
+        <div class="experience-item">
+
+            <h3>Enterprise Systems & ERP</h3>
+
+            <div class="date">
+                Professional Experience
+            </div>
+
+            <p>
+                Exposure to enterprise applications, ERP environments,
+                business processes, application support, and technology
+                solutions aligned with organizational requirements.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            Selected <span>Projects</span>
+        </h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+
+                <h3>Enterprise Solutions</h3>
+
+                <p>
+                    Designing and supporting technology solutions for
+                    enterprise business requirements.
+                </p>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>Cloud & Infrastructure</h3>
+
+                <p>
+                    Infrastructure and cloud-related solution planning,
+                    technical assessment, and implementation support.
+                </p>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>ERP Solutions</h3>
+
+                <p>
+                    Supporting ERP and enterprise application initiatives
+                    from requirements gathering through solution planning
+                    and technical engagement.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">
+            Let's <span>Connect</span>
+        </h2>
+
+        <p>
+            Interested in technology, cloud, infrastructure,
+            enterprise solutions, or collaboration?
+        </p>
+
+        <a href="mailto:your-email@example.com"
+           class="btn btn-primary">
+            Contact Me
+        </a>
+
+    </section>
+
+    <footer>
+
+        © 2026 Reggie Navato. All Rights Reserved.
+
+    </footer>
 
 </body>
 </html>
