@@ -1209,9 +1209,7 @@ footer {
         0 10px 35px
         rgba(0, 0, 0, 0.45);
 
-  
-}
-
+  }
 
 .profile-inquiry-button:hover {
 
@@ -1224,7 +1222,6 @@ footer {
         0 15px 40px
         rgba(0, 0, 0, 0.5);
 }
-
 
 .profile-inquiry-button img {
 
@@ -1242,7 +1239,6 @@ footer {
     animation:
         profilePhotoMove 4s ease-in-out infinite;
 }
-
 
 .inquiry-label {
 
@@ -1282,7 +1278,6 @@ footer {
         transform 0.2s ease;
 }
 
-
 .profile-inquiry-button:hover
 .inquiry-label {
 
@@ -1291,7 +1286,6 @@ footer {
     transform:
         translateX(0);
 }
-
 
 @keyframes profileFloat {
 
