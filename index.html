@@ -828,84 +828,396 @@
     </section>
 
 
+<!-- =========================
+     CONTACT
+========================= -->
 
-    <!-- =========================
-         CONTACT
-    ========================== -->
+<section id="contact" class="contact-section">
 
-    <section id="contact"
-             class="contact-section">
+    <div class="contact-container">
 
-        <div class="contact-container">
-
-            <div class="section-label">
-                Contact
-            </div>
-
-
-            <h2>
-
-                Let's <span>Connect</span>
-
-            </h2>
-
-
-            <p>
-
-                Open to professional opportunities, technology discussions,
-                solution consulting, enterprise technology initiatives,
-                and meaningful collaboration.
-
-            </p>
-
-
-            <div class="contact-buttons">
-
-                <a
-                    href="mailto:reggienavato@gmail.com"
-                    class="btn btn-primary"
-                >
-
-                    Email Me
-
-                </a>
-
-
-                <a
-                    href="https://www.linkedin.com/in/reggie-n-a3b7b0275/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-secondary"
-                >
-
-                    Connect on LinkedIn
-
-                </a>
-
-            </div>
-
+        <div class="section-label">
+            Get In Touch
         </div>
 
-    </section>
+        <h2>
+            Let's <span>Connect</span>
+        </h2>
 
+        <p class="contact-intro">
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <p>
-
-            © 2026 Reggie Canaway Navato.
-            All Rights Reserved.
+            Have a technology requirement, project idea, or
+            business challenge you'd like to discuss?
+            Send me a message and let's explore how I can help.
 
         </p>
 
-    </footer>
+
+        <div class="contact-buttons">
+
+            <a
+                href="mailto:reggienavato@gmail.com"
+                class="btn btn-primary"
+            >
+                Email Me
+            </a>
 
 
-</body>
+            <a
+                href="https://www.linkedin.com/in/reggie-n-a3b7b0275/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+            >
+                Connect on LinkedIn
+            </a>
 
-</html>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FLOATING INQUIRY BUTTON
+========================= -->
+
+<div class="floating-inquiry">
+
+    <button
+        class="profile-inquiry-button"
+        id="openInquiry"
+        aria-label="Open inquiry form"
+    >
+
+        <img
+            src="images/profile.jpg"
+            alt="Inquire with Reggie"
+        >
+
+        <span class="inquiry-label">
+            Inquire Here
+        </span>
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     INQUIRY MODAL
+========================= -->
+
+<div
+    class="inquiry-modal"
+    id="inquiryModal"
+    aria-hidden="true"
+>
+
+    <div class="inquiry-overlay"
+         id="inquiryOverlay">
+    </div>
+
+
+    <div
+        class="inquiry-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="inquiryTitle"
+    >
+
+        <button
+            class="inquiry-close"
+            id="closeInquiry"
+            aria-label="Close inquiry form"
+        >
+            &times;
+        </button>
+
+
+        <div class="section-label">
+            Get In Touch
+        </div>
+
+
+        <h2 id="inquiryTitle">
+            Inquire <span>Here</span>
+        </h2>
+
+
+        <p class="inquiry-description">
+
+            Tell me a little about your requirement.
+            I'll get back to you as soon as possible.
+
+        </p>
+
+
+        <form
+            class="inquiry-form"
+            action="https://formsubmit.co/reggienavato@gmail.com"
+            method="POST"
+        >
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New Website Inquiry - Reggie Canaway Navato"
+            >
+
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="true"
+            >
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="Full Name"
+                        placeholder="Your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="company">
+                        Company / Organization
+                    </label>
+
+                    <input
+                        type="text"
+                        id="company"
+                        name="Company"
+                        placeholder="Company name"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="Email"
+                        placeholder="you@company.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Contact Number *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="Contact Number"
+                        placeholder="+63 9XX XXX XXXX"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="inquiryType">
+                    Inquiry Type *
+                </label>
+
+                <select
+                    id="inquiryType"
+                    name="Inquiry Type"
+                    required
+                >
+
+                    <option value="">
+                        Select an inquiry type
+                    </option>
+
+                    <option value="Solution Architecture">
+                        Solution Architecture
+                    </option>
+
+                    <option value="Cloud & Infrastructure">
+                        Cloud & Infrastructure
+                    </option>
+
+                    <option value="Enterprise Technology / ERP">
+                        Enterprise Technology / ERP
+                    </option>
+
+                    <option value="Technical Consulting">
+                        Technical Consulting
+                    </option>
+
+                    <option value="Technical Pre-Sales">
+                        Technical Pre-Sales
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message *
+                </label>
+
+                <textarea
+                    id="message"
+                    name="Message"
+                    rows="5"
+                    placeholder="Tell me about your requirement..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary submit-btn"
+            >
+                Send Inquiry
+            </button>
+
+
+            <p class="form-note">
+
+                Your information will only be used to respond
+                to your inquiry.
+
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    const openInquiry =
+        document.getElementById("openInquiry");
+
+    const closeInquiry =
+        document.getElementById("closeInquiry");
+
+    const inquiryModal =
+        document.getElementById("inquiryModal");
+
+    const inquiryOverlay =
+        document.getElementById("inquiryOverlay");
+
+
+    function showInquiry() {
+
+        inquiryModal.classList.add("active");
+
+        inquiryModal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.classList.add(
+            "modal-open"
+        );
+
+    }
+
+
+    function hideInquiry() {
+
+        inquiryModal.classList.remove("active");
+
+        inquiryModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.classList.remove(
+            "modal-open"
+        );
+
+    }
+
+
+    openInquiry.addEventListener(
+        "click",
+        showInquiry
+    );
+
+
+    closeInquiry.addEventListener(
+        "click",
+        hideInquiry
+    );
+
+
+    inquiryOverlay.addEventListener(
+        "click",
+        hideInquiry
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (
+                event.key === "Escape" &&
+                inquiryModal.classList.contains("active")
+            ) {
+
+                hideInquiry();
+
+            }
+
+        }
+    );
+
+</script>
+    
