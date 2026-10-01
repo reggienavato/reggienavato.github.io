@@ -58,13 +58,13 @@ nav ul {
 nav a {
     color: #cbd5e1;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: #38bdf8;
-}
+     color: #ffffff;
+  }
 
 /* ========================================
    HERO
@@ -2288,4 +2288,63 @@ body.modal-open {
 
     }
 
+}
+
+/* ========================================
+   SEMINARS & TRAINING    
+======================================== */
+
+.training-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 40px;
+}
+
+    .training-photo img {
+        display: block;
+        max-width: 950px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+/* ========================================
+   SEMINARS & TRAINING - CONTENT SPACING
+======================================== */
+
+.training-content h3 {
+    margin-top: 38px;
+    margin-bottom: 15px;
+}
+
+    .training-content h3:first-of-type {
+        margin-top: 30px;
+    }
+
+.training-content ul {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding-left: 25px;
+}
+
+.training-content li {
+    margin-bottom: 9px;
+    line-height: 1.7;
+}
+
+.training-content p {
+    margin-bottom: 18px;
+    line-height: 1.75;
+}
+
+.training-organizations {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #334155;
+}
+
+.training-reference {
+    margin-top: 30px;
 }
