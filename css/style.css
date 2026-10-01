@@ -19,52 +19,112 @@ body {
     line-height: 1.7;
 }
 
+
 /* ========================================
    NAVIGATION
 ======================================== */
 
+/* Main navigation bar */
 nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
     background: rgba(11, 17, 32, 0.95);
     border-bottom: 1px solid #1e293b;
     backdrop-filter: blur(10px);
 }
 
+/* Navigation container used by DigiKnow
+   and Seminars & Training */
 .nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 16px 30px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px 40px;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    color: #38bdf8;
-    font-size: 24px;
-    font-weight: 800;
-    text-decoration: none;
-    letter-spacing: 1px;
+/* Empty logo area */
+.nav-container .logo {
+    flex-shrink: 0;
 }
 
-nav ul {
+/* Seminars & Training navigation */
+.nav-container nav {
+    margin-left: auto;
+}
+
+/* DigiKnow navigation */
+.nav-container > ul {
+    margin-left: auto;
+}
+
+/* Navigation lists */
+.nav-container nav ul,
+.nav-container > ul {
     list-style: none;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+
+    padding: 0;
+
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
     gap: 28px;
 }
 
-nav a {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-size: 13px;
-    transition: color 0.2s ease;
+/* Navigation items */
+.nav-container nav ul li,
+.nav-container > ul li {
+    margin: 0;
+    padding: 0;
 }
 
-nav a:hover {
-     color: #ffffff;
-  }
+/* Navigation links */
+.nav-container nav ul li a,
+.nav-container > ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    color: #bfc7d5;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    display: inline-block;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+/* Hover */
+.nav-container nav ul li a:hover,
+.nav-container > ul li a:hover {
+    color: #ffffff;
+
+    transform: scale(1.10);
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.55);
+}
+
+/* Active navigation */
+.nav-container nav ul li a.active,
+.nav-container nav ul li a.active-nav,
+.nav-container > ul li a.active,
+.nav-container > ul li a.active-nav {
+    color: #ffffff;
+}
 
 /* ========================================
    HERO
@@ -92,7 +152,7 @@ nav a:hover {
     max-width: 400px;
     height: auto;
     display: block;
-    border-radius: 20px;
+    border-radius: 20px;nav
     border: 1px solid #334155;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
 }
@@ -144,6 +204,7 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
+
 /* ========================================
    BUTTONS
 ======================================== */
@@ -182,6 +243,7 @@ nav a:hover {
     border-color: #38bdf8;
     color: #38bdf8;
 }
+
 
 /* ========================================
    SECTIONS
@@ -232,6 +294,7 @@ section {
     margin-bottom: 40px;
 }
 
+
 /* ========================================
    ABOUT
 ======================================== */
@@ -245,7 +308,7 @@ section {
 
 .about-image img {
     width: 100%;
-    border-radius: 16px;
+    border-radius: 12px;
     border: 1px solid #334155;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
@@ -275,6 +338,7 @@ section {
 .about-approach p {
     margin-bottom: 0;
 }
+
 
 /* ========================================
    EXPERTISE
@@ -320,6 +384,7 @@ section {
     font-size: 15px;
 }
 
+
 /* ========================================
    WHY WORK WITH ME
 ======================================== */
@@ -346,6 +411,7 @@ section {
 .value-item p {
     color: #94a3b8;
 }
+
 
 /* ========================================
    EXPERIENCE TIMELINE
@@ -404,6 +470,7 @@ section {
     color: #94a3b8;
 }
 
+
 /* ========================================
    ENGAGEMENT AREAS
 ======================================== */
@@ -439,6 +506,7 @@ section {
     color: #94a3b8;
     font-size: 15px;
 }
+
 
 /* ========================================
    CONTACT
@@ -482,6 +550,7 @@ section {
     flex-wrap: wrap;
 }
 
+
 /* ========================================
    FOOTER
 ======================================== */
@@ -494,6 +563,7 @@ footer {
     color: #64748b;
     font-size: 14px;
 }
+
 
 /* ========================================
    INQUIRY FORM
@@ -604,6 +674,7 @@ footer {
     text-decoration: underline;
 }
 
+
 /* ========================================
    FLOATING PROFILE INQUIRY
 ======================================== */
@@ -669,6 +740,7 @@ footer {
     transform: translateX(0);
 }
 
+
 /* ========================================
    PROFILE ANIMATION
 ======================================== */
@@ -683,6 +755,7 @@ footer {
         transform: translateY(-8px);
     }
 }
+
 
 /* ========================================
    INQUIRY MODAL
@@ -725,7 +798,7 @@ footer {
     padding: 40px;
     background: #111827;
     border: 1px solid #334155;
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
     transform: translateY(20px) scale(0.98);
     transition: transform 0.25s ease;
@@ -778,1520 +851,398 @@ body.modal-open {
     overflow: hidden;
 }
 
-/* ========================================
-   TABLET
-======================================== */
-
-@media (max-width: 950px) {
-    .hero {
-        grid-template-columns: 330px 1fr;
-        gap: 45px;
-    }
-
-    .about-grid {
-        grid-template-columns: 280px 1fr;
-        gap: 40px;
-    }
-
-    .expertise-grid,
-    .engagement-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 /* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 700px) {
-    nav ul {
-        display: none;
-    }
-
-    .nav-container {
-        padding: 15px 22px;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 60px 25px 80px;
-        gap: 40px;
-    }
-
-    .hero-photo img {
-        max-width: 300px;
-    }
-
-    .hero-content {
-        margin: auto;
-    }
-
-    .hero-description {
-        margin: auto;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    section {
-        padding: 80px 25px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .about-image {
-        max-width: 300px;
-        margin: auto;
-    }
-
-    .expertise-grid,
-    .engagement-grid,
-    .value-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 36px;
-    }
-
-    .timeline-item {
-        grid-template-columns: 20px 1fr;
-        gap: 18px;
-    }
-
-    .timeline-content h3 {
-        font-size: 20px;
-    }
-
-    .floating-inquiry {
-        right: 18px;
-        bottom: 18px;
-    }
-
-    .profile-inquiry-button {
-        width: 72px;
-        height: 72px;
-    }
-
-    .inquiry-label {
-        display: none;
-    }
-
-    .inquiry-box {
-        max-height: 92vh;
-        padding: 30px 20px;
-        border-radius: 12px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .inquiry-close {
-        top: 12px;
-        right: 12px;
-    }
-}
-
-/* ========================================
-   DIGIKNOW
-======================================== */
-
-.digiknow-page {
-    background: #0b1120;
-}
-
-
-/* DIGIKNOW HERO */
-
-.digiknow-hero {
-    max-width: 1100px;
-    min-height: 520px;
-
-    margin: auto;
-    padding: 100px 25px 80px;
-
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 70px;
-
-    align-items: center;
-}
-
-
-.digiknow-author-photo {
-    display: flex;
-    justify-content: center;
-}
-
-
-.digiknow-author-photo img {
-    width: 100%;
-    max-width: 300px;
-
-    border-radius: 18px;
-
-    border: 1px solid #334155;
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.40);
-}
-
-
-.digiknow-hero-content h1 {
-    font-size: clamp(48px, 7vw, 78px);
-
-    color: #ffffff;
-
-    letter-spacing: 2px;
-
-    margin: 10px 0;
-}
-
-
-.digiknow-hero-content h2 {
-    font-size: 26px;
-
-    font-weight: 500;
-
-    color: #38bdf8;
-
-    margin-bottom: 20px;
-}
-
-
-.digiknow-hero-content p {
-    max-width: 650px;
-
-    font-size: 18px;
-
-    color: #94a3b8;
-}
-
-
-.digiknow-author {
-    margin-top: 25px;
-
-    color: #cbd5e1;
-}
-
-
-/* ARTICLE */
-
-.article-section {
-    max-width: 1000px;
-
-    margin: auto;
-
-    padding: 70px 25px;
-}
-
-
-.article-intro {
-    max-width: 900px;
-
-    font-size: 21px;
-
-    line-height: 1.8;
-
-    color: #cbd5e1;
-}
-
-
-.article-text {
-    max-width: 900px;
-
-    margin-top: 25px;
-
-    font-size: 17px;
-
-    color: #94a3b8;
-}
-
-
-/* ARTICLE CARDS */
-
-.article-card,
-.info-highlight {
-    max-width: 950px;
-
-    padding: 35px;
-
-    background: #111827;
-
-    border: 1px solid #334155;
-
-    border-radius: 12px;
-}
-
-
-.article-card p,
-.info-highlight p {
-    color: #94a3b8;
-
-    margin-bottom: 18px;
-}
-
-
-.article-card p:last-child,
-.info-highlight p:last-child {
-    margin-bottom: 0;
-}
-
-
-.info-highlight {
-    border-left: 4px solid #38bdf8;
-}
-
-
-.info-highlight h3 {
-    color: #ffffff;
-
-    margin-bottom: 20px;
-}
-
-
-/* CAPABILITY TABLE */
-
-.digiknow-table-wrapper {
-    overflow-x: auto;
-
-    border: 1px solid #334155;
-
-    border-radius: 12px;
-}
-
-
-.digiknow-table {
-    width: 100%;
-
-    border-collapse: collapse;
-
-    min-width: 700px;
-}
-
-
-.digiknow-table th {
-    text-align: left;
-
-    padding: 18px;
-
-    background: #111827;
-
-    color: #38bdf8;
-
-    font-size: 15px;
-}
-
-
-.digiknow-table td {
-    padding: 20px;
-
-    color: #cbd5e1;
-
-    border-top: 1px solid #334155;
-
-    vertical-align: top;
-}
-
-
-.digiknow-table td:first-child {
-    width: 32%;
-
-    font-weight: bold;
-
-    color: #ffffff;
-}
-
-
-/* DIGIKNOW SIGNATURE */
-
-.digiknow-signature {
-    max-width: 1000px;
-
-    margin: 30px auto 80px;
-
-    padding: 70px 40px;
-
-    text-align: center;
-
-    background: #111827;
-
-    border: 1px solid #334155;
-
-    border-radius: 15px;
-}
-
-
-.digiknow-signature h2 {
-    font-size: 42px;
-
-    color: #38bdf8;
-
-    letter-spacing: 2px;
-}
-
-
-.digiknow-tagline {
-    margin: 12px 0 25px;
-
-    font-size: 21px;
-
-    color: #ffffff;
-}
-
-
-.author-focus {
-    margin-top: 15px;
-
-    color: #64748b;
-}
-
-
-/* SOURCES */
-
-.sources-section {
-    padding-bottom: 100px;
-}
-
-
-.source-note {
-    color: #94a3b8;
-
-    margin-bottom: 30px;
-}
-
-
-.reference-links {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
-
-    gap: 15px;
-}
-
-
-.reference-links a {
-    display: block;
-
-    padding: 18px;
-
-    text-decoration: none;
-
-    color: #38bdf8;
-
-    background: #111827;
-
-    border: 1px solid #334155;
-
-    border-radius: 8px;
-
-    transition: 0.2s;
-}
-
-
-.reference-links a:hover {
-    transform: translateY(-3px);
-
-    border-color: #38bdf8;
-}
-
-
-.active-nav {
-    color: #38bdf8 !important;
-}
-
-
-/* ========================================
-   DIGIKNOW MOBILE
-======================================== */
-
-@media (max-width: 750px) {
-
-    .digiknow-hero {
-
-        grid-template-columns: 1fr;
-
-        text-align: center;
-
-        padding-top: 70px;
-
-        gap: 35px;
-    }
-
-
-    .digiknow-author-photo img {
-        max-width: 260px;
-    }
-
-
-    .digiknow-hero-content h2 {
-        font-size: 21px;
-    }
-
-
-    .article-intro {
-        font-size: 18px;
-    }
-
-
-    .article-card,
-    .info-highlight {
-        padding: 25px;
-    }
-
-
-    .digiknow-signature {
-        margin-left: 20px;
-
-        margin-right: 20px;
-
-        padding: 50px 25px;
-    }
-
-}
-
-/* ========================================
-   DIGIKNOW KNOWLEDGE PORTAL
+   DIGIKNOW PORTAL
 ======================================== */
 
 .digiknow-portal-hero {
-
-    max-width: 1100px;
-
-    min-height: 520px;
-
+    max-width: 1200px;
     margin: auto;
-
-    padding: 100px 25px 80px;
-
+    padding: 90px 30px 70px;
     display: grid;
-
-    grid-template-columns: 300px 1fr;
-
+    grid-template-columns: 360px 1fr;
     gap: 70px;
-
     align-items: center;
-
 }
-
 
 .digiknow-portal-photo {
-
     display: flex;
-
     justify-content: center;
-
+    align-items: center;
 }
-
 
 .digiknow-portal-photo img {
-
     width: 100%;
-
     max-width: 280px;
-
     border-radius: 20px;
-
     border: 1px solid #334155;
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.45);
-
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
-
 
 .digiknow-portal-content h1 {
-
     font-size: clamp(50px, 8vw, 80px);
-
-    color: white;
-
+    color: #ffffff;
     letter-spacing: 3px;
-
     margin: 10px 0;
-
 }
-
 
 .digiknow-portal-content h2 {
-
     font-size: 26px;
-
     color: #38bdf8;
-
     margin-bottom: 20px;
-
 }
-
 
 .digiknow-portal-content p {
-
     font-size: 18px;
-
     color: #94a3b8;
-
     max-width: 650px;
-
 }
-
 
 .digiknow-intro {
-
     margin-top: 20px;
-
 }
-
 
 .digiknow-products {
-
     max-width: 1100px;
-
     margin: auto;
-
     padding: 80px 25px;
-
 }
-
 
 .portal-description {
-
     max-width: 750px;
-
     color: #94a3b8;
-
     margin-bottom: 40px;
-
 }
 
-
-/* PRODUCT GRID */
-
-.product-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(320px, 1fr));
-
-    gap: 20px;
-
-}
-
-
-/* PRODUCT CARD */
-
-.product-card {
-
-    background: #111827;
-
-    border: 1px solid #334155;
-
-    border-radius: 12px;
-
-    overflow: hidden;
-
-}
-
-
-.product-card summary {
-
-    list-style: none;
-
-    cursor: pointer;
-
-    padding: 28px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-}
-
-
-.product-card summary::-webkit-details-marker {
-
-    display: none;
-
-}
-
-
-.product-card summary h3 {
-
-    color: #38bdf8;
-
-    font-size: 24px;
-
-    margin-bottom: 10px;
-
-}
-
-
-.product-card summary p {
-
-    color: #94a3b8;
-
-    font-size: 14px;
-
-    line-height: 1.6;
-
-}
-
-
-.dropdown-arrow {
-
-    color: #38bdf8;
-
-    transition: 0.2s;
-
-}
-
-
-.product-card[open] .dropdown-arrow {
-
-    transform: rotate(180deg);
-
-}
-
-
-/* CATEGORY AREA */
-
-.category-list {
-
-    padding: 0 28px 28px;
-
-    border-top: 1px solid #334155;
-
-}
-
-
-.category-group {
-
-    padding-top: 25px;
-
-}
-
-
-.category-group h4 {
-
-    color: white;
-
-    font-size: 15px;
-
-    margin-bottom: 12px;
-
-}
-
-
-.category-group a {
-
-    display: block;
-
-    padding: 10px 12px;
-
-    margin-bottom: 6px;
-
-    color: #cbd5e1;
-
-    text-decoration: none;
-
-    background: #0f172a;
-
-    border-radius: 6px;
-
-    font-size: 14px;
-
-}
-
-
-.category-group a:hover {
-
-    color: #38bdf8;
-
-}
-
-
-.coming-soon {
-
-    float: right;
-
-    font-size: 10px;
-
-    color: #64748b;
-
-}
-
-
-/* FEATURED ARTICLE */
-
-.featured-knowledge {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 80px 25px 100px;
-
-}
-
-
-.featured-article-card {
-
-    max-width: 800px;
-
-    padding: 40px;
-
-    background: #111827;
-
-    border: 1px solid #334155;
-
-    border-radius: 14px;
-
-}
-
-
-.article-product {
-
-    color: #38bdf8;
-
-    font-size: 13px;
-
-    margin-bottom: 15px;
-
-}
-
-
-.featured-article-card h3 {
-
-    color: white;
-
-    font-size: 28px;
-
-    margin-bottom: 15px;
-
-}
-
-
-.featured-article-card p {
-
-    color: #94a3b8;
-
-    margin-bottom: 25px;
-
-}
-
-
-/* ARTICLE PAGE HERO */
-
-.article-hero {
-
-    max-width: 1000px;
-
-    margin: auto;
-
-    padding: 100px 25px 70px;
-
-}
-
-
-.article-breadcrumb {
-
-    color: #64748b;
-
-    font-size: 13px;
-
-    margin-bottom: 30px;
-
-}
-
-
-.article-breadcrumb a {
-
-    color: #38bdf8;
-
-    text-decoration: none;
-
-}
-
-
-.article-breadcrumb span {
-
-    margin: 0 5px;
-
-}
-
-
-.article-hero h1 {
-
-    font-size: clamp(42px, 6vw, 70px);
-
-    color: white;
-
-    margin-bottom: 20px;
-
-}
-
-
-.article-hero h1 span {
-
-    color: #38bdf8;
-
-}
-
-
-.article-hero p {
-
-    max-width: 750px;
-
-    color: #94a3b8;
-
-    font-size: 19px;
-
-}
-
-
-.article-author {
-
-    margin-top: 30px;
-
-    color: #cbd5e1;
-
-}
-
-
-/* MOBILE */
-
-@media (max-width: 750px) {
-
-    .digiknow-portal-hero {
-
-        grid-template-columns: 1fr;
-
-        text-align: center;
-
-        gap: 35px;
-
-        padding-top: 70px;
-
-    }
-
-
-    .digiknow-portal-photo img {
-
-        max-width: 230px;
-
-    }
-
-
-    .product-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .article-hero {
-
-        padding-top: 70px;
-
-    }
-
-
-    .article-breadcrumb {
-
-        line-height: 1.8;
-
-    }
-
-}
 
 /* ========================================
-   DIGIKNOW MOBILE RESPONSIVE FIX
+   DIGIKNOW PRODUCT GRID
 ======================================== */
 
-@media (max-width: 768px) {
-
-    /* NAVIGATION */
-
-    .nav-container {
-
-        padding: 15px 18px;
-
-        flex-wrap: wrap;
-
-        gap: 15px;
-
-    }
-
-
-    nav ul {
-
-        display: flex;
-
-        flex-wrap: wrap;
-
-        gap: 12px;
-
-        justify-content: flex-end;
-
-    }
-
-
-    nav ul li a {
-
-        font-size: 13px;
-
-    }
-
-
-    /* DIGIKNOW HERO */
-
-    .digiknow-portal-hero {
-
-        grid-template-columns: 1fr;
-
-        text-align: center;
-
-        padding: 70px 20px 50px;
-
-        gap: 30px;
-
-    }
-
-
-    .digiknow-portal-photo {
-
-        order: 1;
-
-    }
-
-
-    .digiknow-portal-content {
-
-        order: 2;
-
-    }
-
-
-    .digiknow-portal-photo img {
-
-        width: 220px;
-
-        max-width: 80%;
-
-        height: auto;
-
-        margin: auto;
-
-    }
-
-
-    .digiknow-portal-content h1 {
-
-        font-size: 48px;
-
-        letter-spacing: 2px;
-
-    }
-
-
-    .digiknow-portal-content h2 {
-
-        font-size: 22px;
-
-    }
-
-
-    .digiknow-portal-content p {
-
-        font-size: 16px;
-
-        line-height: 1.7;
-
-    }
-
-
-    /* PRODUCT SECTION */
-
-    .digiknow-products {
-
-        padding: 60px 18px;
-
-    }
-
-
-    .product-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-
-    }
-
-
-    .product-card summary {
-
-        padding: 22px 18px;
-
-    }
-
-
-    .product-card summary h3 {
-
-        font-size: 21px;
-
-    }
-
-
-    .category-list {
-
-        padding: 0 18px 20px;
-
-    }
-
-
-    .category-group a {
-
-        font-size: 13px;
-
-        padding: 12px;
-
-        line-height: 1.5;
-
-    }
-
-
-    /* FEATURED ARTICLE */
-
-    .featured-knowledge {
-
-        padding: 60px 18px;
-
-    }
-
-
-    .featured-article-card {
-
-        padding: 25px 20px;
-
-    }
-
-
-    .featured-article-card h3 {
-
-        font-size: 24px;
-
-    }
-
-
-    /* ARTICLE PAGE */
-
-    .article-hero {
-
-        padding: 70px 20px 50px;
-
-    }
-
-
-    .article-hero h1 {
-
-        font-size: 38px;
-
-    }
-
-
-    .article-hero p {
-
-        font-size: 16px;
-
-    }
-
-
-    .article-breadcrumb {
-
-        font-size: 11px;
-
-        line-height: 1.8;
-
-    }
-
-
-    .article-section {
-
-        padding-left: 18px;
-
-        padding-right: 18px;
-
-    }
-
-
-    /* TABLE RESPONSIVE */
-
-    .digiknow-table-wrapper {
-
-        overflow-x: auto;
-
-        width: 100%;
-
-        -webkit-overflow-scrolling: touch;
-
-    }
-
-
-    .digiknow-table {
-
-        min-width: 650px;
-
-    }
-
-
-    /* BUTTONS */
-
-    .btn {
-
-        display: inline-block;
-
-        margin: 5px;
-
-        width: auto;
-
-        text-align: center;
-
-    }
-
-
-    /* FOOTER */
-
-    footer {
-
-        padding: 25px 18px;
-
-        font-size: 12px;
-
-        line-height: 1.7;
-
-    }
-
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
 }
+
+.product-card {
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.product-card summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.product-card summary h3 {
+    color: #38bdf8;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-card summary p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.dropdown-arrow {
+    color: #38bdf8;
+    transition: 0.2s;
+}
+
+.product-card[open] .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* ========================================
+   DIGIKNOW CATEGORY AREA
+======================================== */
+
+.category-list {
+    padding: 0 28px 28px;
+    border-top: 1px solid #334155;
+}
+
+.category-group {
+    padding-top: 25px;
+}
+
+.category-group h4 {
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.category-group a {
+    display: block;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    color: #cbd5e1;
+    text-decoration: none;
+    background: #0f172a;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.category-group a:hover {
+    color: #38bdf8;
+}
+
+.coming-soon {
+    float: right;
+    font-size: 10px;
+    color: #64748b;
+}
+
+
+/* ========================================
+   FEATURED ARTICLE
+======================================== */
+
+.featured-knowledge {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 25px 100px;
+}
+
+.featured-article-card {
+    max-width: 800px;
+    padding: 40px;
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 14px;
+}
+
+.article-product {
+    color: #38bdf8;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.featured-article-card h3 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.featured-article-card p {
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   ARTICLE PAGE HERO
+======================================== */
+
+.article-hero {
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 25px 70px;
+}
+
+.article-breadcrumb {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.article-breadcrumb a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.article-breadcrumb span {
+    margin: 0 5px;
+}
+
+.article-hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.article-hero h1 span {
+    color: #38bdf8;
+}
+
+.article-hero p {
+    max-width: 750px;
+    color: #94a3b8;
+    font-size: 19px;
+}
+
+.article-author {
+    margin-top: 30px;
+    color: #cbd5e1;
+}
+
 
 /* ========================================
    TESTIMONIALS PAGE
 ======================================== */
 
 .testimonials-hero {
-
     max-width: 950px;
-
     margin: auto;
-
     padding: 100px 25px 70px;
-
 }
-
 
 .testimonials-hero h1 {
-
     font-size: clamp(45px, 7vw, 72px);
-
-    color: white;
-
+    color: #ffffff;
     margin: 15px 0 20px;
-
 }
-
 
 .testimonials-hero h1 span {
-
     color: #38bdf8;
-
 }
-
 
 .testimonials-hero p {
-
     max-width: 750px;
-
     color: #94a3b8;
-
     font-size: 17px;
-
     margin-bottom: 15px;
-
 }
-
 
 .testimonial-submit {
-
     max-width: 950px;
-
     margin: auto;
-
     padding: 70px 25px 100px;
-
 }
-
 
 .testimonial-description {
-
     max-width: 750px;
-
     color: #94a3b8;
-
     margin-bottom: 40px;
-
 }
 
-
-/* FORM */
-
-.testimonial-form {
-
-    max-width: 750px;
-
-    background: #111827;
-
-    border: 1px solid #334155;
-
-    border-radius: 14px;
-
-    padding: 35px;
-
-}
-
-
-.form-group {
-
-    margin-bottom: 25px;
-
-}
-
-
-.form-group label {
-
-    display: block;
-
-    color: #e2e8f0;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    margin-bottom: 8px;
-
-}
-
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-
-    width: 100%;
-
-    padding: 13px 14px;
-
-    background: #0f172a;
-
-    color: #e2e8f0;
-
-    border: 1px solid #334155;
-
-    border-radius: 6px;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 14px;
-
-}
-
-
-.form-group textarea {
-
-    resize: vertical;
-
-    min-height: 150px;
-
-}
-
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-
-    outline: none;
-
-    border-color: #38bdf8;
-
-}
-
-
-.form-group small {
-
-    display: block;
-
-    color: #64748b;
-
-    margin-top: 6px;
-
-    font-size: 12px;
-
-}
-
-
-/* CONSENT */
-
-.form-consent {
-
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 10px;
-
-    margin-bottom: 30px;
-
-}
-
-
-.form-consent input {
-
-    margin-top: 4px;
-
-    width: 16px;
-
-    height: 16px;
-
-}
-
-
-.form-consent label {
-
-    color: #94a3b8;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-
-}
-
-
-/* PUBLISHED TESTIMONIALS */
-
-.published-testimonials {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 70px 25px 100px;
-
-}
-
-
-.testimonial-empty {
-
-    max-width: 750px;
-
-    padding: 35px;
-
-    background: #111827;
-
-    border: 1px solid #334155;
-
-    border-radius: 14px;
-
-}
-
-
-.testimonial-empty h3 {
-
-    color: white;
-
-    margin-bottom: 10px;
-
-}
-
-
-.testimonial-empty p {
-
-    color: #94a3b8;
-
-}
-
-
-/* ACTIVE NAVIGATION */
-
-.active-nav {
-
-    color: #38bdf8 !important;
-
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .testimonials-hero {
-
-        padding: 70px 20px 50px;
-
-    }
-
-
-    .testimonials-hero h1 {
-
-        font-size: 45px;
-
-    }
-
-
-    .testimonials-hero p {
-
-        font-size: 16px;
-
-    }
-
-
-    .testimonial-submit {
-
-        padding: 50px 18px 70px;
-
-    }
-
-
-    .testimonial-form {
-
-        padding: 25px 20px;
-
-    }
-
-
-    .published-testimonials {
-
-        padding: 50px 18px 70px;
-
-    }
-
-
-    .testimonial-empty {
-
-        padding: 25px 20px;
-
-    }
-
-}
 
 /* ========================================
-   SEMINARS & TRAINING    
+   TESTIMONIAL FORM
+======================================== */
+
+.testimonial-form {
+    max-width: 750px;
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    padding: 35px;
+}
+
+.testimonial-form .form-group {
+    margin-bottom: 25px;
+}
+
+.testimonial-form .form-group label {
+    display: block;
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.testimonial-form .form-group input,
+.testimonial-form .form-group select,
+.testimonial-form .form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    background: #0f172a;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.testimonial-form .form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.testimonial-form .form-group input:focus,
+.testimonial-form .form-group select:focus,
+.testimonial-form .form-group textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.testimonial-form .form-group small {
+    display: block;
+    color: #64748b;
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   CONSENT
+======================================== */
+
+.form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.form-consent input {
+    margin-top: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.form-consent label {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   PUBLISHED TESTIMONIALS
+======================================== */
+
+.published-testimonials {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 25px 100px;
+}
+
+.testimonial-empty {
+    max-width: 750px;
+    padding: 35px;
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 14px;
+}
+
+.testimonial-empty h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.testimonial-empty p {
+    color: #94a3b8;
+}
+
+
+/* ========================================
+   SEMINARS & TRAINING
 ======================================== */
 
 .training-photo {
@@ -2302,26 +1253,22 @@ body.modal-open {
     margin: 30px auto 40px;
 }
 
-    .training-photo img {
-        display: block;
-        max-width: 950px;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-    }
-
-/* ========================================
-   SEMINARS & TRAINING - CONTENT SPACING
-======================================== */
+.training-photo img {
+    display: block;
+    max-width: 950px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
 
 .training-content h3 {
-    margin-top: 38px;
+    margin-top: 18px;
     margin-bottom: 15px;
 }
 
-    .training-content h3:first-of-type {
-        margin-top: 30px;
-    }
+.training-content h3:first-of-type {
+    margin-top: 30px;
+}
 
 .training-content ul {
     margin-top: 10px;
@@ -2347,4 +1294,382 @@ body.modal-open {
 
 .training-reference {
     margin-top: 30px;
+}
+
+
+/* ========================================
+   LINKEDIN ORIGINAL POST
+======================================== */
+
+.linkedin-original-post {
+    display: inline-block;
+    font-size: 11px;
+    color: #ffffff;
+    text-decoration: none;
+    animation: linkedinBlink 1.8s ease-in-out infinite;
+    transition:
+        transform 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+.linkedin-original-post:hover {
+    color: #ffffff;
+    transform: scale(1.12);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    animation: none;
+}
+
+@keyframes linkedinBlink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+    .hero {
+        grid-template-columns: 330px 1fr;
+        gap: 45px;
+    }
+
+    .about-grid {
+        grid-template-columns: 280px 1fr;
+        gap: 40px;
+    }
+
+    .expertise-grid,
+    .engagement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ========================================
+   TABLET / MOBILE NAVIGATION
+======================================== */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        padding: 14px 20px;
+        overflow-x: auto;
+    }
+
+    .nav-container nav ul,
+    .nav-container > ul {
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: nowrap;
+    }
+
+    .nav-container nav ul li a,
+    .nav-container > ul li a {
+        font-size: 13px;
+    }
+
+}
+    /* DIGIKNOW HERO */
+
+    .digiknow-portal-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 70px 20px 50px;
+        gap: 30px;
+    }
+
+    .digiknow-portal-photo {
+        order: 1;
+    }
+
+    .digiknow-portal-content {
+        order: 2;
+    }
+
+    .digiknow-portal-photo img {
+        width: 220px;
+        max-width: 80%;
+        height: auto;
+        margin: auto;
+    }
+
+    .digiknow-portal-content h1 {
+        font-size: 48px;
+        letter-spacing: 2px;
+    }
+
+    .digiknow-portal-content h2 {
+        font-size: 22px;
+    }
+
+    .digiknow-portal-content p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+
+    /* DIGIKNOW PRODUCTS */
+
+    .digiknow-products {
+        padding: 60px 18px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .product-card summary {
+        padding: 22px 18px;
+    }
+
+    .product-card summary h3 {
+        font-size: 21px;
+    }
+
+    .category-list {
+        padding: 0 18px 20px;
+    }
+
+    .category-group a {
+        font-size: 13px;
+        padding: 12px;
+        line-height: 1.5;
+    }
+
+
+    /* FEATURED ARTICLE */
+
+    .featured-knowledge {
+        padding: 60px 18px;
+    }
+
+    .featured-article-card {
+        padding: 25px 20px;
+    }
+
+    .featured-article-card h3 {
+        font-size: 24px;
+    }
+
+
+    /* ARTICLE PAGE */
+
+    .article-hero {
+        padding: 70px 20px 50px;
+    }
+
+    .article-hero h1 {
+        font-size: 38px;
+    }
+
+    .article-hero p {
+        font-size: 16px;
+    }
+
+    .article-breadcrumb {
+        font-size: 11px;
+        line-height: 1.8;
+    }
+
+    .article-section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    /* TABLE RESPONSIVE */
+
+    .digiknow-table-wrapper {
+        overflow-x: auto;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .digiknow-table {
+        min-width: 650px;
+    }
+
+
+    /* BUTTONS */
+
+    .btn {
+        display: inline-block;
+        margin: 5px;
+        width: auto;
+        text-align: center;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 25px 18px;
+        font-size: 12px;
+        line-height: 1.7;
+    }
+}
+
+
+/* ========================================
+   MOBILE - 750px
+======================================== */
+
+@media (max-width: 750px) {
+
+    .digiknow-portal-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+        padding-top: 70px;
+    }
+
+    .digiknow-portal-photo img {
+        max-width: 230px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-hero {
+        padding-top: 70px;
+    }
+
+    .article-breadcrumb {
+        line-height: 1.8;
+    }
+}
+
+
+/* ========================================
+   TESTIMONIALS MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .testimonials-hero {
+        padding: 70px 20px 50px;
+    }
+
+    .testimonials-hero h1 {
+        font-size: 45px;
+    }
+
+    .testimonials-hero p {
+        font-size: 16px;
+    }
+
+    .testimonial-submit {
+        padding: 50px 18px 70px;
+    }
+
+    .testimonial-form {
+        padding: 25px 20px;
+    }
+
+    .published-testimonials {
+        padding: 50px 18px 70px;
+    }
+
+    .testimonial-empty {
+        padding: 25px 20px;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero-photo {
+        order: 1;
+    }
+
+    .hero-content {
+        order: 2;
+        margin: auto;
+    }
+
+    .hero-photo img {
+        max-width: 300px;
+    }
+
+    .hero-description {
+        margin: auto;
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        max-width: 320px;
+        margin: auto;
+    }
+
+    .expertise-grid,
+    .engagement-grid,
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 75px 20px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .inquiry-form {
+        padding: 25px 20px;
+    }
+
+    .inquiry-box {
+        padding: 30px 20px;
+    }
+
+    .floating-inquiry {
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .profile-inquiry-button {
+        width: 72px;
+        height: 72px;
+    }
+
+    .inquiry-label {
+        display: none;
+    }
 }
